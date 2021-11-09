@@ -1,0 +1,17 @@
+Landing/Login
+  banner
+  login form
+    log in button
+
+View Board
+  update status button
+  sign-in board
+    user status
+  sort/order dropdown
+
+Update Status
+  log out button
+  display name
+  status update form
+    status dropdown
+    update status button

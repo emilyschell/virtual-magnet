@@ -1,0 +1,167 @@
+[
+  {
+    "email": "dschrute@dundermifflin.com",
+    "firstName": "Dwight",
+    "lastName": "Schrute",
+    "department": "sales",
+    "password": "DwightOMG!",
+    "location": "out",
+    "returnInfo": "tomorrow",
+    "contactInfo": "at the beet farm",
+    "timestamp": "11/8/2021, 2:32:38 PM"
+  },
+  {
+    "email": "jhalpert@dundermifflin.com",
+    "firstName": "Jim",
+    "lastName": "Halpert",
+    "department": "sales",
+    "password": "JimOMG!",
+    "location": "in",
+    "returnInfo": "",
+    "contactInfo": "at my desk",
+    "timestamp": "11/8/2021, 2:32:38 PM"
+  },
+  {
+    "email": "pvance@dundermifflin.com",
+    "firstName": "Phyllis",
+    "lastName": "Vance",
+    "department": "sales",
+    "password": "PhyllisOMG!",
+    "location": "break",
+    "returnInfo": "",
+    "contactInfo": "",
+    "timestamp": "11/8/2021, 2:32:38 PM"
+  },
+  {
+    "email": "shudson@dundermifflin.com",
+    "firstName": "Stanley",
+    "lastName": "Hudson",
+    "department": "sales",
+    "password": "StanleyOMG!",
+    "location": "vacation",
+    "returnInfo": "",
+    "contactInfo": "",
+    "timestamp": "11/8/2021, 2:32:38 PM"
+  },
+  {
+    "email": "pbeesly@dundermifflin.com",
+    "firstName": "Pam",
+    "lastName": "Beesly",
+    "department": "reception",
+    "password": "PamOMG!",
+    "location": "in",
+    "returnInfo": "",
+    "contactInfo": "",
+    "timestamp": "11/8/2021, 2:32:38 PM"
+  },
+  {
+    "email": "abernard@dundermifflin.com",
+    "firstName": "Andy",
+    "lastName": "Bernard",
+    "department": "sales",
+    "password": "AndyOMG!",
+    "location": "sick",
+    "returnInfo": "next month",
+    "contactInfo": "on a boat",
+    "timestamp": "11/8/2021, 2:32:38 PM"
+  },
+  {
+    "email": "amartin@dundermifflin.com",
+    "firstName": "Angela",
+    "lastName": "Martin",
+    "department": "accounting",
+    "password": "AngelaOMG!",
+    "location": "sick",
+    "returnInfo": "tomorrow",
+    "contactInfo": "",
+    "timestamp": "11/8/2021, 2:32:38 PM"
+  },
+  {
+    "email": "omartinez@dundermifflin.com",
+    "firstName": "Oscar",
+    "lastName": "Martinez",
+    "department": "accounting",
+    "password": "OscarOMG!",
+    "location": "in",
+    "returnInfo": "",
+    "contactInfo": "call my cell",
+    "timestamp": "11/8/2021, 2:32:38 PM"
+  },
+  {
+    "email": "kmalone@dundermifflin.com",
+    "firstName": "Kevin",
+    "lastName": "Malone",
+    "department": "accounting",
+    "password": "KevinOMG!",
+    "location": "sick",
+    "returnInfo": "tomorrow",
+    "contactInfo": "too much chili",
+    "timestamp": "11/8/2021, 2:32:38 PM"
+  },
+  {
+    "email": "thenderson@dundermifflin.com",
+    "firstName": "Toby",
+    "lastName": "Henderson",
+    "department": "human resources",
+    "password": "TobyOMG!",
+    "location": "break",
+    "returnInfo": "1pm",
+    "contactInfo": "at lunch",
+    "timestamp": "11/8/2021, 2:32:38 PM"
+  },
+  {
+    "email": "mscott@dundermifflin.com",
+    "firstName": "Michael",
+    "lastName": "Scott",
+    "department": "management",
+    "password": "MichaelOMG!",
+    "location": "out",
+    "returnInfo": "2pm",
+    "contactInfo": "twss",
+    "timestamp": "11/8/2021, 2:32:38 PM"
+  },
+  {
+    "email": "rhoward@dundermifflin.com",
+    "firstName": "Ryan",
+    "lastName": "Howard",
+    "department": "sales",
+    "password": "RyanOMG!",
+    "location": "break",
+    "returnInfo": "15min",
+    "contactInfo": "in the break room",
+    "timestamp": "11/8/2021, 2:32:38 PM"
+  },
+  {
+    "email": "kkapoor@dundermifflin.com",
+    "firstName": "Kelly",
+    "lastName": "Kapoor",
+    "department": "customer service",
+    "password": "KellyOMG!",
+    "location": "in",
+    "returnInfo": "",
+    "contactInfo": "email me",
+    "timestamp": "11/8/2021, 2:32:38 PM"
+  },
+  {
+    "email": "dphilbin@dundermifflin.com",
+    "firstName": "Darryl",
+    "lastName": "Philbin",
+    "department": "warehouse",
+    "password": "DarrylOMG!",
+    "location": "in",
+    "returnInfo": "",
+    "contactInfo": "in the warehouse",
+    "timestamp": "11/8/2021, 2:32:38 PM"
+  },
+  {
+    "email": "mpalmer@dundermifflin.com",
+    "firstName": "Meredith",
+    "lastName": "Palmer",
+    "department": "customer service",
+    "password": "MeredithOMG!",
+    "location": "wfh",
+    "returnInfo": "tomorrow",
+    "contactInfo": "call my cell",
+    "timestamp": "11/8/2021, 2:32:38 PM"
+  }
+]
