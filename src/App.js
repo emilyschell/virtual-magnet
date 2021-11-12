@@ -24,12 +24,17 @@ const App = () => {
     fetchData()
   }, [fetchData]);
 
-  let loggedInUser
+  console.log('userList: ' + JSON.stringify(userList));
+
+  let loggedInUser;
+  let i;
   if (loggedInEmail) {
+    console.log('loggedInEmail: ' + loggedInEmail);
     let user = userList.find(user => user.email === loggedInEmail);
-    let i = userList.indexOf(user);
+    console.log('user: ' + JSON.stringify(user));
+    console.log('user.email: ' + user.email);
+    i = userList.indexOf(user);
     loggedInUser = userList[i];
-    console.log(loggedInUser);
   } else {
     loggedInUser = null;
   }
@@ -72,7 +77,15 @@ const App = () => {
         navigate={navigate}
         loggedInUser={loggedInUser}
         setLoggedInEmail={setLoggedInEmail}
-        onUpdateStatus={userData => setUserList(...userList, userList[userList.indexOf(loggedInUser)] = userData)}
+        onUpdateStatus={
+          userData => {
+            console.log('userList before update: ' + JSON.stringify(userList));
+            setUserList(userList.filter(user => user !== loggedInUser));
+            console.log('userList during update1: ' + JSON.stringify(userList));
+            setUserList(...userList, userData);
+            console.log('userlist during update2: ' + JSON.stringify(userList));
+          }
+        }
       />
     )
   }

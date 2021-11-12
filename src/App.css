@@ -2,10 +2,15 @@
 
 html {
   color: #fff;
+  font: 24px 'PT Sans', sans-serif;
 }
 
 body {
   background-color: #000;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .pageWrapper {
@@ -51,7 +56,7 @@ input[type="password"] {
   min-width: fit-content;
 }
 
-.labelInput {
+.field {
   display: block;
   margin: 20px 0;
   text-align: right;
@@ -63,7 +68,8 @@ button {
   height: 45px;
 }
 
-.loginButton {
+.loginButton,
+.updateStatusButton {
   background-color: #d4fac7;
   margin: 20px auto;
   min-width: 200px;
@@ -71,12 +77,227 @@ button {
 
 /********** User Status Bar **********/
 
-.status-bar {
+ul {
+  padding: 0;
+}
+
+.statusBar {
   border-radius: 10px;
-  width: 90vw;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  font-family: 'PT Sans', sans-serif;
+  height: 100px;
+  justify-content: space-between;
+  list-style: none;
+  margin: 5px auto;
+  padding: 8px;
 }
 
-.name {
+.inBar {
+  background-color: #d4fac7;
+}
+
+.outBar {
+  background-color: #FFCBCB;
+}
+
+.vacationBar {
+  background-color: #FFF4BC;
+}
+
+.sickBar {
+  background-color: #D7F3FF;
+}
+
+.breakBar {
+  background-color: #FFE3C2;
+}
+
+.wfhBar {
+  background-color: #D9DDFF;
+}
+
+.row1,
+.row2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.contactInfo {
+  align-self: flex-end;
+}
+
+.name,
+.timestamp,
+.returnLabel {
   font-weight: bold;
+  margin: 0;
 }
 
+.contactInfo {
+  font-size: 18px;
+  margin: 0;
+  text-align: right;
+}
+
+.returnLabel {
+  text-decoration: underline;
+}
+
+.returnInfo {
+  font-size: 20px;
+  margin: 0;
+}
+
+.name,
+.statusBox {
+  font-size: 20px;
+}
+
+.timestamp,
+.returnLabel {
+  font-size: 13px;
+}
+
+.returnBlock,
+.statusBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.returnBlock {
+  align-items: flex-start;
+  justify-self: flex-start;
+}
+
+.statusBox {
+  border: #000 solid 1px;
+  border-radius: 0;
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  margin: 3px auto;
+  padding: 0;
+  text-align: center;
+  width: 100px;
+}
+
+.vacationBox,
+.breakBox {
+  color: #000;
+}
+
+
+.inBox {
+  background-color: #3ADB3A;
+}
+
+.outBox {
+  background-color: #DB3A3A;
+}
+
+.breakBox {
+  background-color: #FFAB2D;
+}
+
+.sickBox {
+  background-color: #3AABDB;
+}
+
+.vacationBox {
+  background-color: #F9F253;
+}
+
+.wfhBox {
+  background-color: #A32DFF;
+}
+
+/********** View Board Page **********/
+
+#sortButton {
+  height: 35px;
+  position: absolute;
+  right: 30px;
+  top: 40px;
+  width: 35px;
+}
+
+/********** Update Status Page **********/
+
+.logoutButton {
+  align-self: flex-end;
+  background-color: #FFCBCB;
+  height: 45px;
+  width: 120px;
+}
+
+.updateStatusPage h1 {
+  margin-bottom: 0;
+}
+
+.dropdownMenuField {
+  align-content: flex-start;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dropdownLabel {
+  align-self: flex-start;
+  margin-right: 5px;
+}
+
+.dropdownMenuWhole {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.openDropdownTop,
+.closedDropdownTop {
+  background-color: #fff;
+  display: flex;
+  height: 35px;
+  padding: 3px;
+  width: 200px;
+}
+
+.openDropdownTop {
+  border-radius: 10px 10px 0 0;
+  margin: 0;
+}
+
+.closedDropdownTop {
+  border-radius: 10px;
+}
+
+#downArrow {
+  color: #000;
+  margin: 4px 4px 0 0;
+}
+
+.dropdownItem {
+  background-color: #fff;
+  border: #000 solid 1px;
+  display: flex;
+  height: 35px;
+  margin: 0;
+  padding: 3px;
+  text-align: center;
+  width: 200px;
+}
+
+.dropdownItem:last-of-type {
+  border-radius: 0 0 10px 10px;
+}
+
+.openDropdownMenu {
+  border: #000 solid 1px;
+  border-radius: 0 0 10px 10px;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}

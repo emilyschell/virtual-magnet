@@ -1,3 +1,12 @@
+To do 
+
+get update status working
+sorting function/sorting dropdown
+make responsive to bigger screens (show photo/dept?)
+add login/security functionality
+make it create a changelog
+
+
 Landing/Login
   banner
   login form

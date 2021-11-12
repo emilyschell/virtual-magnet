@@ -1,13 +1,13 @@
 import UserStatus from "./UserStatus"
+import { AiOutlineSortAscending } from "react-icons/ai"
 // import BoardSettings from "./BoardSettings"
-import { IoSettingsOutline } from "react-icons/io5"
 
 const ViewBoard = ({ navigate, userList }) => {
 
   return (
-    <div className="viewBoardPage">
+    <div className="pageWrapper">
       <div className="updateStatusButtonContainer">
-        <button type="submit" onClick={() => navigate("updateStatus")} className="updateStatusButton">
+        <button onClick={() => navigate("updateStatus")} className="updateStatusButton">
           update status
         </button>
       </div>
@@ -19,7 +19,7 @@ const ViewBoard = ({ navigate, userList }) => {
           sortBy={sortBy}
           onSortByChange={mySort => setSortBy(mySort)}
         /> */}
-        <IoSettingsOutline />
+        <AiOutlineSortAscending id="sortButton" />
       </div>
 
       <div className="board">

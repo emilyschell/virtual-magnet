@@ -1,19 +1,17 @@
-import StatusBlock from './StatusBlock'
-
 const UserStatus = ({ user }) => {
 
   return (
-    <li className="status-bar">
+    <li className={`${user.location}Bar statusBar`}>
       <div className="row1">
-        <span className="name">{user.firstName + " " + user.lastName}</span>
-        <span className="status">
-          <span className="timestamp">{user.timestamp}</span>
-          <StatusBlock location={user.location} />
-        </span>
+        <p className="name">{user.firstName + " " + user.lastName}</p>
+        <div className="statusBlock">
+          <p className="timestamp">{user.timestamp}</p>
+          <p className={`${user.location}Box statusBox`}>{user.location}</p>
+        </div>
       </div>
       <div className="row2">
-        <div>
-          <p className="returnLabel">Will return: </p>
+        <div className="returnBlock">
+          {user.returnInfo && <p className="returnLabel">Returning: </p>}
           <p className="returnInfo">{user.returnInfo}</p>
         </div>
         <div className="contactInfo">

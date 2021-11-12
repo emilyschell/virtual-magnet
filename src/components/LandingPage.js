@@ -14,18 +14,19 @@ const LandingPage = ({ navigate, setLoggedInEmail }) => {
     <div className="pageWrapper">
 
       <h1>Virtual <IoRadioButtonOn id="magnetIcon" />Magnet</h1>
-      <div className="loginForm">
-        <div className="labelInput">
+
+      <form className="loginForm">
+        <div className="field">
           <label htmlFor="email">email: </label>
           <input
-            type="text"
+            type="email"
             id="email"
             onChange={(event) => { setLoginData({ ...loginData, email: event.target.value }) }}
-            value={loginData.email}
+            // value={loginData.email}
             required />
         </div>
 
-        <div className="labelInput">
+        <div className="field">
           <label htmlFor="password">password: </label>
           <input
             type="password"
@@ -38,8 +39,8 @@ const LandingPage = ({ navigate, setLoggedInEmail }) => {
         {/* <input type="checkbox" name="staySignedIn" id="staySignedIn" />
         <label htmlFor="staySignedIn">stay signed in</label> */}
 
-        <button className="loginButton" onClick={() => logIn(loginData.email)}>log in</button>
-      </div>
+        <button type="submit" className="loginButton" onClick={() => logIn(loginData.email)}>log in</button>
+      </form>
     </div>
   )
 }
