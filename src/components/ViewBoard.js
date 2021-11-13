@@ -19,23 +19,24 @@ const ViewBoard = ({ navigate, userList }) => {
 
   return (
     <div className="pageWrapper">
-      <div className="updateStatusButtonContainer">
+
+      <div className="viewBoardTopRow">
         <button onClick={() => navigate("updateStatus")} className="updateStatusButton">
           update status
         </button>
-      </div>
 
-      <div className="settingsContainer">
-        <AiOutlineSortAscending
-          onClick={() => setToggleDropdown(!toggleDropdown)}
-          id="sortButton" />
-        <SortDropdown
-          toggle={toggleDropdown}
-          sortBy={sortBy}
-          onSortByChange={(mySort) => setSortBy(mySort)}
-          orderBy={orderBy}
-          onOrderByChange={(myOrder) => setOrderBy(myOrder)}
-        />
+        <div className="sortContainer">
+          <AiOutlineSortAscending
+            onClick={() => setToggleDropdown(!toggleDropdown)}
+            id="sortButton" />
+          <SortDropdown
+            toggle={toggleDropdown}
+            sortBy={sortBy}
+            onSortByChange={(mySort) => setSortBy(mySort)}
+            orderBy={orderBy}
+            onOrderByChange={(myOrder) => setOrderBy(myOrder)}
+          />
+        </div>
       </div>
 
       <div className="board">

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=PT+Sans+Narrow&family=PT+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:wght@400;700&display=swap');
 
 html {
   color: #fff;
@@ -221,26 +221,80 @@ ul {
 
 /********** View Board Page **********/
 
+.viewBoardTopRow {
+  align-items: flex-end;
+  display: flex;
+}
+
+.updateStatusButton {
+  align-self: center;
+  margin-bottom: 0;
+}
+
+.sortContainer {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
 #sortButton {
   cursor: pointer;
   height: 35px;
-  position: absolute;
-  right: 30px;
-  top: 40px;
   width: 35px;
 }
+
+#sortDropdown {
+  border: #fff solid 1px;
+  display: block;
+  float: right;
+  font-family: 'PT Sans Narrow', sans-serif;
+  width: fit-content;
+}
+
+.menuItem,
+.sortDropdownLabel {
+  border: #fff solid 1px;
+  padding: 0 1rem 0 .5rem;
+}
+
+.sortDropdownLabel {
+  font-weight: bold;
+}
+
+.menuItem {
+  cursor: pointer;
+  text-align: left;
+}
+
+.menuItem:hover {
+  background-color: #777;
+}
+
+
 
 /********** Update Status Page **********/
 
 .logoutButton {
   align-self: flex-end;
   background-color: #FFCBCB;
-  height: 45px;
+  height: 40px;
   width: 120px;
 }
 
 .updateStatusPage h1 {
   margin-bottom: 0;
+}
+
+.updateStatusForm {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 350px;
+}
+
+.updateStatusForm .field {
+  margin: .5rem 0;
 }
 
 .dropdownMenuField {
