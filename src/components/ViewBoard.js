@@ -27,7 +27,7 @@ const ViewBoard = ({ navigate, userList }) => {
 
       <div className="settingsContainer">
         <AiOutlineSortAscending
-          onClick={setToggleDropdown(!toggleDropdown)}
+          onClick={() => setToggleDropdown(!toggleDropdown)}
           id="sortButton" />
         <SortDropdown
           toggle={toggleDropdown}
