@@ -1,41 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:wght@400;700&display=swap');
 
 html {
-  color: #fff;
-  font: 24px 'PT Sans', sans-serif;
+  font: 20px 'PT Sans', sans-serif;
 }
 
 body {
   background-color: #000;
+  color: #fff;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.pageWrapper {
+/********** Landing Page **********/
+
+.landingPage {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: 1rem auto;
-  position: relative;
-  max-width: 500px;
 }
 
-/********** Landing Page **********/
-
 h1 {
-  font: 48px 'Caveat', cursive;
-  line-height: 100px;
-  min-height: 100px;
+  font: 52px 'Caveat', cursive;
 }
 
 #magnetIcon {
-  height: 50px;
+  height: auto;
   margin: 0 8px;
   padding: 0;
-  vertical-align: center;
-  width: 50px;
+  max-width: 50px;
   vertical-align: text-bottom;
 }
 
@@ -49,34 +44,40 @@ input[type="password"] {
   border-radius: 10px;
   height: 35px;
   padding: 5px;
-  max-width: 90%;
   min-width: 200px;
 }
 
 .loginForm {
   margin: 0 auto;
-  max-width: 90%;
-  min-width: fit-content;
+  text-align: right;
 }
 
 .field {
   display: block;
   margin: 20px 0;
-  text-align: right;
 }
 
 button {
+  background-color: #eee;   
   border-radius: 10px;
   font: 28px 'PT Sans Narrow', sans-serif;
   height: 40px;
 }
 
-.loginButton,
-.updateStatusButton {
-  background-color: #d4fac7;
-  cursor: pointer;
-  margin: 20px auto 10px;
+.loginButton {
+  margin: 20px auto;
   min-width: 150px;
+}
+
+.loginButton:hover {
+  background-color: #3adb3a;
+  color: #fff;
+}
+
+.loginButton,
+.updateStatusButton,
+.logoutButton {
+  cursor: pointer;
 }
 
 /********** User Status Bar **********/
@@ -131,6 +132,9 @@ ul {
 
 .contactInfo {
   align-self: flex-end;
+  font-size: 18px;
+  margin: 0;
+  text-align: right;
 }
 
 .name,
@@ -141,24 +145,12 @@ ul {
   margin: 0;
 }
 
-.contactInfo {
-  font-size: 18px;
-  margin: 0;
-  text-align: right;
-}
-
 .returnLabel {
   text-decoration: underline;
 }
 
 .returnInfo {
-  font-size: 20px;
   margin: 0;
-}
-
-.name,
-.statusBox {
-  font-size: 20px;
 }
 
 .timestamp,
@@ -174,7 +166,6 @@ ul {
 
 .returnBlock {
   align-items: flex-start;
-  justify-self: flex-start;
 }
 
 .statusBox {
@@ -193,7 +184,6 @@ ul {
 .breakBox {
   color: #000;
 }
-
 
 .inBox {
   background-color: #3ADB3A;
@@ -221,14 +211,26 @@ ul {
 
 /********** View Board Page **********/
 
+.viewBoardPage {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  max-width: 1000px;
+}
+
 .viewBoardTopRow {
-  align-items: flex-end;
+  justify-content: space-between;
   display: flex;
 }
 
 .updateStatusButton {
-  align-self: center;
-  margin-bottom: 0;
+  margin: 0;
+  width: 150px;
+}
+
+.updateStatusButton:hover {
+  background-color: #3aabdb;
+  color: #fff;
 }
 
 .sortContainer {
@@ -241,11 +243,15 @@ ul {
   width: 35px;
 }
 
+#sortButton:hover {
+  color: #3aabdb;
+}
+
 #sortDropdown {
   background-color: #000;
   border: #fff solid 1px;
   display: block;
-  font-family: 'PT Sans Narrow', sans-serif;
+  font: 22px 'PT Sans Narrow', sans-serif;
   position: absolute;
   right: 0;
   top: 35px;
@@ -264,6 +270,7 @@ ul {
 
 .sortDropdownLabel {
   font-weight: bold;
+  text-align: center;
 }
 
 .menuItem {
@@ -275,27 +282,33 @@ ul {
   background-color: #777;
 }
 
-
-
 /********** Update Status Page **********/
+
+.updateStatusPage {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 1rem auto;
+}
 
 .logoutButton {
   align-self: flex-end;
-  background-color: #FFCBCB;
   height: 40px;
+  margin-right: 1rem;
   width: 120px;
 }
 
-.updateStatusPage h1 {
-  margin-bottom: 0;
+.logoutButton:hover {
+  background-color: #db3a3a;
+  color: #fff;
 }
 
 .updateStatusForm {
-  justify-content: center;
+  align-items: flex-end;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 350px;
+  max-width: 500px;
 }
 
 .updateStatusForm .field {
@@ -324,6 +337,7 @@ ul {
   display: flex;
   height: 35px;
   padding: 3px;
+  position: relative;
   width: 200px;
 }
 
@@ -338,6 +352,8 @@ ul {
 #downArrow {
   color: #000;
   margin: 4px 4px 0 0;
+  position: absolute;
+  right: 0;
 }
 
 .dropdownItem {
@@ -366,6 +382,10 @@ ul {
 
 .hidden {
   display: none;
+}
+
+.updateStatusPage .updateStatusButton {
+  margin-top: 1rem;
 }
 
 /********** 385px make inputs and labels block, redesign logo, reduce side margins **********/

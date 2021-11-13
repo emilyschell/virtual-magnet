@@ -36,7 +36,7 @@ const UpdateStatus = ({ setLoggedInEmail, loggedInUser, onUpdateStatus, navigate
   }
 
   return (
-    <div className="updateStatusPage pageWrapper">
+    <div className="updateStatusPage">
       <button className="logoutButton" onClick={() => logout()}>log out</button>
 
       <h1>{loggedInUser.firstName + " " + loggedInUser.lastName}</h1>

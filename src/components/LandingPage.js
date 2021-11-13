@@ -11,7 +11,7 @@ const LandingPage = ({ navigate, setLoggedInEmail }) => {
   const [loginData, setLoginData] = useState({ email: '' })
 
   return (
-    <div className="pageWrapper">
+    <div className="landingPage">
 
       <h1>Virtual <IoRadioButtonOn id="magnetIcon" />Magnet</h1>
 
@@ -36,10 +36,16 @@ const LandingPage = ({ navigate, setLoggedInEmail }) => {
             required />
         </div>
 
-        {/* <input type="checkbox" name="staySignedIn" id="staySignedIn" />
+        {/* <input type="checkbox" id="staySignedIn" />
         <label htmlFor="staySignedIn">stay signed in</label> */}
 
-        <button type="submit" className="loginButton" onClick={() => logIn(loginData.email)}>log in</button>
+        <button
+          type="submit"
+          className="loginButton"
+          onClick={() => logIn(loginData.email)}
+        >
+          log in
+        </button>
       </form>
     </div>
   )

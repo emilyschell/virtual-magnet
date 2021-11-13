@@ -18,7 +18,7 @@ const ViewBoard = ({ navigate, userList }) => {
   })
 
   return (
-    <div className="pageWrapper">
+    <div className="viewBoardPage">
 
       <div className="viewBoardTopRow">
         <button onClick={() => navigate("updateStatus")} className="updateStatusButton">
