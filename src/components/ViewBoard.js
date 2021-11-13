@@ -32,9 +32,15 @@ const ViewBoard = ({ navigate, userList }) => {
           <SortDropdown
             toggle={toggleDropdown}
             sortBy={sortBy}
-            onSortByChange={(mySort) => setSortBy(mySort)}
+            onSortByChange={(mySort) => {
+              setSortBy(mySort)
+              setToggleDropdown(!toggleDropdown)
+            }}
             orderBy={orderBy}
-            onOrderByChange={(myOrder) => setOrderBy(myOrder)}
+            onOrderByChange={(myOrder) => {
+              setOrderBy(myOrder)
+              setToggleDropdown(!toggleDropdown)
+            }}
           />
         </div>
       </div>
