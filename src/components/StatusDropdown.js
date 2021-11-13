@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { IoCaretDown } from 'react-icons/io5';
 
-const Dropdown = ({ formData, setFormData, current }) => {
+const StatusDropdown = ({ formData, setFormData, current }) => {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState(current);
 
@@ -84,4 +84,4 @@ const Dropdown = ({ formData, setFormData, current }) => {
   );
 };
 
-export default Dropdown;
+export default StatusDropdown;

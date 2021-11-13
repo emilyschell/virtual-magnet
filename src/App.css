@@ -67,16 +67,16 @@ input[type="password"] {
 
 button {
   border-radius: 10px;
-  font: 32px 'PT Sans Narrow', sans-serif;
-  height: 45px;
+  font: 28px 'PT Sans Narrow', sans-serif;
+  height: 40px;
 }
 
 .loginButton,
 .updateStatusButton {
   background-color: #d4fac7;
   cursor: pointer;
-  margin: 20px auto;
-  min-width: 200px;
+  margin: 20px auto 10px;
+  min-width: 150px;
 }
 
 /********** User Status Bar **********/

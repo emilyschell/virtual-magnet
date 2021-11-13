@@ -63,11 +63,13 @@ const App = () => {
         setLoggedInEmail={setLoggedInEmail}
         onUpdateStatus={
           userData => {
-            console.log('userList before update: ' + JSON.stringify(userList));
-            setUserList(userList.filter(user => user !== loggedInUser));
-            console.log('userList during update1: ' + JSON.stringify(userList));
-            setUserList(...userList, userData);
-            console.log('userlist during update2: ' + JSON.stringify(userList));
+            console.log('onUpdateStatus userData', userData)
+            console.log('userList before update: ', userList);
+            const filteredUserList = userList.filter(user => user !== loggedInUser)
+            console.log('filteredUserList', filteredUserList)
+            const newUserList = [...filteredUserList, userData]
+            console.log('newUserList', newUserList)
+            setUserList(newUserList);
           }
         }
       />

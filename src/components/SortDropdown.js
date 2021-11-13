@@ -17,9 +17,9 @@ const SortDropdown = ({ toggle, sortBy, onSortByChange, orderBy, onOrderByChange
       <div onClick={() => onSortByChange('department')}
         className="menuItem" role="menuitem">department {(sortBy === 'department') && <BiCheck />}</div>
       <div onClick={() => onOrderByChange('asc')}
-        className="menuItem" role="menuitem">Asc {(orderBy === 'asc') && <BiCheck />}</div>
+        className="menuItem" role="menuitem">ascending {(orderBy === 'asc') && <BiCheck />}</div>
       <div onClick={() => onOrderByChange('desc')}
-        className="menuItem" role="menuitem">Desc {(orderBy === 'desc') && <BiCheck />}</div>
+        className="menuItem" role="menuitem">descending {(orderBy === 'desc') && <BiCheck />}</div>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Dropdown from "./Dropdown"
+import StatusDropdown from "./StatusDropdown"
 
 const UpdateStatus = ({ setLoggedInEmail, loggedInUser, onUpdateStatus, navigate }) => {
 
@@ -42,7 +42,7 @@ const UpdateStatus = ({ setLoggedInEmail, loggedInUser, onUpdateStatus, navigate
       <h1>{loggedInUser.firstName + " " + loggedInUser.lastName}</h1>
 
       <form className="updateStatusForm">
-        <Dropdown
+        <StatusDropdown
           formData={formData}
           setFormData={setFormData}
           current={loggedInUser.location}
