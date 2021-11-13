@@ -1,8 +1,21 @@
 import UserStatus from "./UserStatus"
+import SortDropdown from "./SortDropdown"
 import { AiOutlineSortAscending } from "react-icons/ai"
-// import BoardSettings from "./BoardSettings"
+import { useState } from "react"
 
 const ViewBoard = ({ navigate, userList }) => {
+
+  const [toggleDropdown, setToggleDropdown] = useState(false);
+  const [sortBy, setSortBy] = useState("firstName");
+  const [orderBy, setOrderBy] = useState("asc");
+
+  const sortedStatuses = userList.sort((a, b) => {
+    let order = (orderBy === 'asc') ? 1 : -1;
+    return (
+      a[sortBy].toLowerCase() < b[sortBy].toLowerCase()
+        ? -1 * order : 1 * order
+    )
+  })
 
   return (
     <div className="pageWrapper">
@@ -13,22 +26,25 @@ const ViewBoard = ({ navigate, userList }) => {
       </div>
 
       <div className="settingsContainer">
-        {/* <BoardSettings
-          orderBy={orderBy}
-          onOrderByChange={myOrder => setOrderBy(myOrder)}
+        <AiOutlineSortAscending
+          onClick={setToggleDropdown(!toggleDropdown)}
+          id="sortButton" />
+        <SortDropdown
+          toggle={toggleDropdown}
           sortBy={sortBy}
-          onSortByChange={mySort => setSortBy(mySort)}
-        /> */}
-        <AiOutlineSortAscending id="sortButton" />
+          onSortByChange={(mySort) => setSortBy(mySort)}
+          orderBy={orderBy}
+          onOrderByChange={(myOrder) => setOrderBy(myOrder)}
+        />
       </div>
 
       <div className="board">
         <ul>
-          {userList
+          {sortedStatuses
             .map(user => {
               return (
                 <UserStatus
-                  key={user["email"]}
+                  key={user.email}
                   user={user}
                 />
               )

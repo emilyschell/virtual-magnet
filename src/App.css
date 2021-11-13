@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=PT+Sans&family=PT+Sans+Narrow&family=Roboto+Slab&family=Roboto:ital,wght@0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=PT+Sans+Narrow&family=PT+Sans:wght@400;700&display=swap');
 
 html {
   color: #fff;
@@ -17,7 +17,9 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 1rem;
+  margin: 1rem auto;
+  position: relative;
+  max-width: 500px;
 }
 
 /********** Landing Page **********/
@@ -46,6 +48,7 @@ input[type="email"],
 input[type="password"] {
   border-radius: 10px;
   height: 35px;
+  padding: 5px;
   max-width: 90%;
   min-width: 200px;
 }
@@ -71,6 +74,7 @@ button {
 .loginButton,
 .updateStatusButton {
   background-color: #d4fac7;
+  cursor: pointer;
   margin: 20px auto;
   min-width: 200px;
 }
@@ -130,6 +134,7 @@ ul {
 }
 
 .name,
+.statusBox,
 .timestamp,
 .returnLabel {
   font-weight: bold;
@@ -175,9 +180,9 @@ ul {
 .statusBox {
   border: #000 solid 1px;
   border-radius: 0;
+  color: #fff;
   display: inline-block;
-  height: 24px;
-  line-height: 24px;
+  height: 26px;
   margin: 3px auto;
   padding: 0;
   text-align: center;
@@ -217,6 +222,7 @@ ul {
 /********** View Board Page **********/
 
 #sortButton {
+  cursor: pointer;
   height: 35px;
   position: absolute;
   right: 30px;
@@ -238,13 +244,12 @@ ul {
 }
 
 .dropdownMenuField {
-  align-content: flex-start;
   display: flex;
   justify-content: flex-end;
 }
 
 .dropdownLabel {
-  align-self: flex-start;
+  line-height: 35px;
   margin-right: 5px;
 }
 
@@ -265,7 +270,6 @@ ul {
 
 .openDropdownTop {
   border-radius: 10px 10px 0 0;
-  margin: 0;
 }
 
 .closedDropdownTop {
@@ -283,9 +287,12 @@ ul {
   display: flex;
   height: 35px;
   margin: 0;
-  padding: 3px;
   text-align: center;
   width: 200px;
+}
+
+.dropdownItem:hover {
+  background-color: #777;
 }
 
 .dropdownItem:last-of-type {
@@ -301,3 +308,7 @@ ul {
 .hidden {
   display: none;
 }
+
+/********** 385px make inputs and labels block, redesign logo, reduce side margins **********/
+
+/********** 450px + increase font size, add content, make single-row **********/

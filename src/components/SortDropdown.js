@@ -1,8 +1,6 @@
 import { BiCheck } from "react-icons/bi"
-import { IoSettingsOutline } from "react-icons/io5"
-import { useState } from "react"
 
-const DropDown = ({ toggle, sortBy, onSortByChange, orderBy, onOrderByChange }) => {
+const SortDropdown = ({ toggle, sortBy, onSortByChange, orderBy, onOrderByChange }) => {
   if (!toggle) {
     return null;
   }
@@ -26,22 +24,4 @@ const DropDown = ({ toggle, sortBy, onSortByChange, orderBy, onOrderByChange }) 
   )
 }
 
-const BoardSettings = ({ sortBy, onSortByChange, orderBy, onOrderByChange }) => {
-  let [toggleDropdown, setToggleDropdown] = useState(false);
-  return (
-    <div>
-      <button type="button" onClick={setToggleDropdown(!toggleDropdown)}
-        className="settingsButton" aria-haspopup="true" aria-expanded="true">
-        <IoSettingsOutline />
-      </button>
-      <DropDown toggle={toggleDropdown}
-        sortBy={sortBy}
-        onSortByChange={mySort => onSortByChange(mySort)}
-        orderBy={orderBy}
-        onOrderByChange={myOrder => onOrderByChange(myOrder)}
-      />
-    </div>
-  )
-}
-
-export default BoardSettings
+export default SortDropdown

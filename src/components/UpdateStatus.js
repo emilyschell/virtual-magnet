@@ -41,7 +41,7 @@ const UpdateStatus = ({ setLoggedInEmail, loggedInUser, onUpdateStatus, navigate
 
       <h1>{loggedInUser.firstName + " " + loggedInUser.lastName}</h1>
 
-      <div className="updateStatusForm">
+      <form className="updateStatusForm">
         <Dropdown
           formData={formData}
           setFormData={setFormData}
@@ -67,8 +67,8 @@ const UpdateStatus = ({ setLoggedInEmail, loggedInUser, onUpdateStatus, navigate
         <button type="submit" onClick={updateUserStatus} className="updateStatusButton">
           update status
         </button>
-      </div>
-    </div >
+      </form>
+    </div>
   )
 }
 

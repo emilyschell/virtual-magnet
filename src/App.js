@@ -8,8 +8,6 @@ const App = () => {
 
   const [currentPage, setCurrentPage] = useState("landing");
   const [userList, setUserList] = useState([]);
-  // const [sortBy, setSortBy] = useState("firstName");
-  // const [orderBy, setOrderBy] = useState("asc");
   const [loggedInEmail, setLoggedInEmail] = useState(null);
 
   const fetchData = useCallback(() => {
@@ -39,19 +37,9 @@ const App = () => {
     loggedInUser = null;
   }
 
-  // const sortedStatuses = userList.sort((a, b) => {
-  //   let order = (orderBy === 'asc') ? 1 : -1;
-  //   return (
-  //     a[sortBy].toLowerCase() < b[sortBy].toLowerCase()
-  //       ? -1 * order : 1 * order
-  //   )
-  // })
-
   const navigate = (newPage) => {
     setCurrentPage(newPage)
   }
-
-  console.log(currentPage);
 
   if (currentPage === "landing") {
     return (
@@ -65,10 +53,6 @@ const App = () => {
       <ViewBoard
         navigate={navigate}
         userList={userList}
-      // sortBy={sortBy}
-      // setSortBy={setSortBy}
-      // orderBy={orderBy}
-      // setOrderBy={setOrderBy}
       />
     )
   } else if (currentPage === "updateStatus") {
