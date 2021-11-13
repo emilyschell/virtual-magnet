@@ -232,9 +232,7 @@ ul {
 }
 
 .sortContainer {
-  align-items: flex-end;
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
 #sortButton {
@@ -244,17 +242,24 @@ ul {
 }
 
 #sortDropdown {
+  background-color: #000;
   border: #fff solid 1px;
   display: block;
-  float: right;
   font-family: 'PT Sans Narrow', sans-serif;
-  width: fit-content;
+  position: absolute;
+  right: 0;
+  top: 35px;
+  width: 175px;
+}
+
+#checkMark {
+  float: right;
 }
 
 .menuItem,
 .sortDropdownLabel {
   border: #fff solid 1px;
-  padding: 0 1rem 0 .5rem;
+  padding: 0 .5rem;
 }
 
 .sortDropdownLabel {
