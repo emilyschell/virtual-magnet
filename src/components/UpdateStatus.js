@@ -25,6 +25,7 @@ const UpdateStatus = ({ setLoggedInEmail, loggedInUser, onUpdateStatus, navigate
       firstName: loggedInUser.firstName,
       lastName: loggedInUser.lastName,
       department: loggedInUser.department,
+      photo: loggedInUser.photo,
       location: formData.location,
       returnInfo: formData.returnInfo,
       contactInfo: formData.contactInfo,
@@ -50,19 +51,26 @@ const UpdateStatus = ({ setLoggedInEmail, loggedInUser, onUpdateStatus, navigate
 
         <div className="field">
           <label htmlFor="returnInfo">returning: </label>
-          <input type="text" name="returnInfo" id="returnInfo"
+          <input
+            type="text"
+            id="returnInfo"
             onChange={(event) => { setFormData({ ...formData, returnInfo: event.target.value }) }}
             value={formData.returnInfo}
+            maxLength="25"
           />
         </div>
 
         <div className="field">
           <label htmlFor="contactInfo">contact: </label>
-          <input type="text" name="contactInfo" id="contactInfo"
+          <input
+            type="text"
+            id="contactInfo"
             onChange={(event) => { setFormData({ ...formData, contactInfo: event.target.value }) }}
             value={formData.contactInfo}
+            maxLength="25"
           />
         </div>
+        <small>(25 character max)</small>
 
         <button type="submit" onClick={updateUserStatus} className="updateStatusButton">
           update status

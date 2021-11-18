@@ -22,15 +22,10 @@ const App = () => {
     fetchData()
   }, [fetchData]);
 
-  console.log('userList: ' + JSON.stringify(userList));
-
   let loggedInUser;
   let i;
   if (loggedInEmail) {
-    console.log('loggedInEmail: ' + loggedInEmail);
     let user = userList.find(user => user.email === loggedInEmail);
-    console.log('user: ' + JSON.stringify(user));
-    console.log('user.email: ' + user.email);
     i = userList.indexOf(user);
     loggedInUser = userList[i];
   } else {
@@ -46,6 +41,7 @@ const App = () => {
       <LandingPage
         navigate={navigate}
         setLoggedInEmail={setLoggedInEmail}
+        userList={userList}
       />
     )
   } else if (currentPage === "viewBoard") {

@@ -57,6 +57,23 @@ input[type="password"] {
   margin: 20px 0;
 }
 
+.loginForm div:nth-of-type(2) {
+  margin-bottom: 5px;
+}
+
+.loginForm div:last-of-type {
+  margin: 0;
+}
+
+input[type="checkbox"] + label {
+  font-size: 20px;
+  margin-left: 3px;
+}
+
+.error {
+  color: #f00;
+}
+
 button {
   background-color: #eee;   
   border-radius: 10px;
@@ -384,10 +401,71 @@ ul {
   display: none;
 }
 
+small {
+  font: 14px 'PT Sans Narrow', sans-serif;
+  margin-top: 0;
+}
+
 .updateStatusPage .updateStatusButton {
   margin-top: 1rem;
 }
 
 /********** 385px make inputs and labels block, redesign logo, reduce side margins **********/
 
-/********** 450px + increase font size, add content, make single-row **********/
+@media screen and (max-width: 385px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  .returnInfo,
+  .contactInfo {
+    font-size: 16px;
+  }
+
+  label {
+    display: block;
+  }
+
+  .dropdownMenuField {
+    flex-direction: column;
+  }
+
+  .updateStatusForm,
+  .loginForm {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+
+/********** 650px + **********/
+
+@media screen and (min-width: 650px) {
+
+  .statusBar {
+    flex-direction: row;
+  }
+
+  .photo {
+    display: block;
+    flex: 1;
+    margin-right: 1rem;
+  }
+
+  .textInfo {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    flex: 7;
+  }
+
+  .department {
+    display: block;
+    margin: 0;
+  }
+
+  .nameBlock {
+    display: flex;
+    flex-direction: column;
+  }
+}
