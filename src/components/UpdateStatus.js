@@ -17,11 +17,10 @@ const UpdateStatus = ({ setLoggedInEmail, loggedInUser, onUpdateStatus, navigate
   const [formData, setFormData] = useState(startingData)
 
   const updateUserStatus = () => {
-    // console.log('updateUserStatus started!'); Works!
     const time = new Date().toLocaleString([], { hour12: true, hour: 'numeric', minute: '2-digit', year: 'numeric', month: 'numeric', day: 'numeric' });
-    // console.log(time); Works!
     const userData = {
       email: loggedInUser.email,
+      password: loggedInUser.password,
       firstName: loggedInUser.firstName,
       lastName: loggedInUser.lastName,
       department: loggedInUser.department,
@@ -31,7 +30,6 @@ const UpdateStatus = ({ setLoggedInEmail, loggedInUser, onUpdateStatus, navigate
       contactInfo: formData.contactInfo,
       timestamp: time
     }
-    // console.log("userData: " + JSON.stringify(userData)); Works!
     onUpdateStatus(userData);
     navigate("viewBoard");
   }
