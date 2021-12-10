@@ -426,6 +426,10 @@ small {
     display: block;
   }
 
+  input[type=checkbox]+label {
+    display: inline;
+  }
+
   .dropdownMenuField {
     flex-direction: column;
   }
